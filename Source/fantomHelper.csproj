@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
-    <AssemblyName>JellyFishFreezeFix</AssemblyName>
-    <RootNamespace>Celeste.Mod.JellyFishFreezeFix</RootNamespace>
+    <AssemblyName>fantomHelper</AssemblyName>
+    <RootNamespace>Celeste.Mod.fantomHelper</RootNamespace>
     <LangVersion>latest</LangVersion>
     <CelestePrefix Condition="'$(CelestePrefix)' == '' And Exists('..\..\..\Celeste.dll')">..\..\..</CelestePrefix>
     <CelestePrefix Condition="'$(CelestePrefix)' == ''">lib-stripped</CelestePrefix>
@@ -39,15 +39,15 @@
   </Target>
 
   <Target Name="PackageMod" AfterTargets="CopyFiles" Inputs="$(ZippedFiles)"
-    Outputs="..\JellyFishFreezeFix.zip" Condition="'$(Configuration)' == 'Release'">
+    Outputs="..\fantomHelper.zip" Condition="'$(Configuration)' == 'Release'">
     <ItemGroup>
       <FilesToPackage Include="$(ZippedFiles)" />
     </ItemGroup>
-    <PackageMod Files="@(FilesToPackage)" OutputPath="..\JellyFishFreezeFix.zip" />
+    <PackageMod Files="@(FilesToPackage)" OutputPath="..\fantomHelper.zip" />
   </Target>
 
   <PropertyGroup>
-    <PathMap>$(MSBuildProjectDirectory)=JellyFishFreezeFix/</PathMap>
+    <PathMap>$(MSBuildProjectDirectory)=fantomHelper/</PathMap>
   </PropertyGroup>
 
   <!-- Inline task used to create a .zip for the mod -->

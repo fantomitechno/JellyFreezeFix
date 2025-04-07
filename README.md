@@ -1,4 +1,4 @@
-# JellyFishFreezeFix
+# fantomHelper
 
 This mod fixes a crash when Freezing a JellyFish
 
